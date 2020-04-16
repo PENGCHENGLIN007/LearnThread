@@ -1,5 +1,7 @@
 package com.pcl.learn.thread;
 
+import sun.security.provider.Sun;
+
 /**
  * 模板方法设计模式
  */
@@ -23,22 +25,10 @@ public class TmplateMethod {
         };
 
         tmplateMethod.start();
-        Sun sun = new Sun();
-        sun.start();
-
     }
 }
 
-class Sun extends Thread{
-    @Override
-    public void start(){
-        System.out.println("重写了Start");
-    }
 
-}
 
-abstract class Threadd implements Runnable{
-
-}
 
 
