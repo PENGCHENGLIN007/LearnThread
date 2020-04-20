@@ -1,6 +1,6 @@
 package com.pcl.learn.thread;
 
-import sun.security.provider.Sun;
+import sun.nio.ch.ThreadPool;
 
 /**
  * 模板方法设计模式
@@ -16,6 +16,8 @@ public class TmplateMethod {
     }
 
     public static void main(String[] args) {
+        ThreadGroup threadPool = new ThreadGroup("name");
+        Thread t = new Thread(threadPool,"t");
         TmplateMethod tmplateMethod = new TmplateMethod(){
             @Override
             public void run(){
@@ -23,7 +25,6 @@ public class TmplateMethod {
 
             }
         };
-
         tmplateMethod.start();
     }
 }

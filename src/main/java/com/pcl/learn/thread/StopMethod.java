@@ -97,6 +97,7 @@ public class StopMethod {
         new ReadObjectThread().start();
         while (true){
             Thread t = new ChangeObjectThread();
+            t.setName("ChangeObjectThread");
             t.start();
             Thread.sleep(150);
             t.stop();
